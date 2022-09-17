@@ -141,13 +141,13 @@
         $(obj).attr('value','Please wait ...');
         var map={}
         map["name"]=$("#flatNumberName").val();
-        map["emailid"]=$("#email").val();
-        map["phoneNo"]=$("#phoneNO").val();
+      //  map["emailid"]=$("#email").val();
+        map["mobile"]=$("#phoneNO").val();
         map["message"]=$("#message").val();
         $.ajax({
          type: 'POST',
          data: JSON.stringify(map),
-         url: "https://a8ok76592i.execute-api.ap-south-1.amazonaws.com/dev/SP/sendEmail",
+         url: "https://6azqonbehd.execute-api.ap-south-1.amazonaws.com/dev/SP/raj_saveSentMsg",
          success: function (response) {
         alert("Thanks for your Feedback\Suggestion, Your response is important to us, We will get back you soon.");
         location.reload();
