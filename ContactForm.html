@@ -118,21 +118,22 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/active.js"></script>
     <script src="js/contextPath.js"></script>
+    <script src="js/bootpopup.js"></script> 
     <script>
         function sendInfo(obj){
           
             if($("#flatNumberName").val() == '' ){
-    		   alert('Please enter Flat Number / Name details.');
+                bootpopup.alert('Please enter Flat Number / Name details.','Shubh Villa');
     		   $("#flatNumberName").focus()
     		   return false;
     	   	}
     		 if($("#phoneNO").val() == '' ){
-      		   alert('Please enter Phone / Mobile Number.');
+                bootpopup.alert('Please enter Phone / Mobile Number.','Shubh Villa');
       		 $("#phoneNO").focus()
       		   return false;
       	   	}
     		 if($("#message").val() == '' ){
-        		   alert('Please enter Feedback / Suggestions.');
+                bootpopup.alert('Please enter Feedback / Suggestions.','Shubh Villa');
         		   $("#message").focus()
         		   return false;
         	   }
@@ -149,11 +150,12 @@
          data: JSON.stringify(map),
          url: "https://6azqonbehd.execute-api.ap-south-1.amazonaws.com/dev/SP/raj_saveSentMsg",
          success: function (response) {
-        alert("Thanks for your Feedback\Suggestion, Your response is important to us, We will get back you soon.");
+           // alert("Thanks for your Feedback\Suggestion, Your response is important to us, We will get back you soon.");
+            alert('Thanks for your Feedback\Suggestion, Your response is important to us, We will get back you soon.');
         location.reload();
         },
          error : function (response) {
-        alert("Error while submitting response, Please contact Jalaj Purohit (9820684534)")
+            bootpopup.alert("Error while submitting response, Please contact Jalaj Purohit (9820684534)")
         location.reload();
         }
         
