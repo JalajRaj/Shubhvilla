@@ -150,9 +150,11 @@
          data: JSON.stringify(map),
          url: "https://6azqonbehd.execute-api.ap-south-1.amazonaws.com/dev/SP/raj_saveSentMsg",
          success: function (response) {
-           // alert("Thanks for your Feedback\Suggestion, Your response is important to us, We will get back you soon.");
-            alert('Thanks for your Feedback\Suggestion, Your response is important to us, We will get back you soon.');
-        location.reload();
+            alert("Thanks for your Feedback\Suggestion, Your response is important to us, We will get back you soon.");
+           //bootpopup.alert('Thanks for your Feedback\Suggestion, Your response is important to us, We will get back you soon.','Shubh Villa');
+
+
+           location.reload();
         },
          error : function (response) {
             bootpopup.alert("Error while submitting response, Please contact Jalaj Purohit (9820684534)")
