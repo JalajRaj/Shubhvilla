@@ -82,6 +82,7 @@
             <th>Villa No.</th>
             <th>Villa Owner</th>
             <th>Mobile No.</th>
+            <th>Members Count</th>
             <th>Owner\Tenant\Vacant</th>
         </thead>
         <tbody></tbody>
@@ -128,36 +129,36 @@
      var list = [];
   
 
-     list.push("Villa-04,@Bhupesh Saini,@9829325960,@Owner"); 
-     list.push("Villa-07,@Rahul Pandey,@9672125813,@Owner"); 
-     list.push("Villa-09,@Raghvendra Sharma,@7976767857,@Owner"); 
-     list.push("Villa-10,@Jogendra Sachdeva,@9828080386,@Owner"); 
-     list.push("Villa-12,@Gaurav Kothari,@9982567222,@Owner"); 
-     list.push("Villa-13,@Anil Sharma,@9983344889,@Owner"); 
-     list.push("Villa-20,@ Ved Prakash Parashar,@9462071435,@Owner"); 
-     list.push("Villa-24,@Abhimanyu Saraswat,@9461594523,@Owner"); 
-     list.push("Villa-26,@Rakesh Kumar,@9079205061,@Owner"); 
-     list.push("Villa-27,@Deepesh Sharma,@9829192929,@Owner"); 
-     list.push("Villa-33,@Prakash Joshi,@8128028832,@Owner"); 
-     list.push("Villa-34,@Vijay Meena,@9667392585,@Owner"); 
-     list.push("Villa-37,@Gajendra Sharma,@9166122226,@Owner"); 
-     list.push("Villa-39,@Manish Salvi,@9024048874,@Owner"); 
-     list.push("Villa-42,@Prakash Gaur,@9887444483,@Owner"); 
-     list.push("Villa-43,@Arun Tripathi,@8003068888,@Owner"); 
-     list.push("Villa-44,@Ravindra Verma,@9928309236,@Owner"); 
-     list.push("Villa-45,@Nand Singh Rajawat,@9928438888,@Owner"); 
-     list.push("Villa-46,@Vikas Mahala,@8561811965,@Owner"); 
-     list.push("Villa-47,@Manoj ,@9460070338,@Owner"); 
-     list.push("Villa-52,@Shailesh Bansal,@9461856524,@Owner"); 
-     list.push("Villa-53,@Rohit Jain,@9828576337,@Owner"); 
-     list.push("Villa-65,@Jalaj Rajpurohit,@9820684534,@Owner");
-     list.push("Villa-67,@Abhishek Jaiman,@9414054353,@Owner"); 
-     list.push("Villa-68,@Shrish Jaiman,@9887629361,@Owner"); 
-     list.push("Villa-69,@Piyush,@9828487854,@Owner"); 
-     list.push("Villa-71,@Suresh kumar Sharma,@8875115223,@Owner"); 
-     list.push("Villa-72,@Nikesh Chaudhary,@9828030761,@Owner"); 
-     list.push("Villa-73,@Richa Sharma,@9811547001,@Owner"); 
-     list.push("Villa-88,@Pankaj Chauhan,@9772525987,@Owner"); 
+     list.push("Villa-04,@Bhupesh Saini,@9829325960,@2,@Owner"); 
+     list.push("Villa-07,@Rahul Pandey,@9672125813,@3,@Owner"); 
+     list.push("Villa-09,@Raghvendra Sharma,@7976767857,@3,@Owner"); 
+     list.push("Villa-10,@Jogendra Sachdeva,@9828080386,@2,@Owner"); 
+     list.push("Villa-12,@Gaurav Kothari,@9982567222,@3,@Owner"); 
+     list.push("Villa-13,@Anil Sharma,@9983344889,@4,@Owner"); 
+     list.push("Villa-20,@ Ved Prakash Parashar,@9462071435,@3,@Owner"); 
+     list.push("Villa-24,@Abhimanyu Saraswat,@9461594523,@3,@Owner"); 
+     list.push("Villa-26,@Rakesh Kumar,@9079205061,@3,@Owner"); 
+     list.push("Villa-27,@Deepesh Sharma,@9829192929,@2,@Owner"); 
+     list.push("Villa-33,@Prakash Joshi,@8128028832,@2,@Owner"); 
+     list.push("Villa-34,@Vijay Meena,@9667392585,@3,@Owner"); 
+     list.push("Villa-37,@Gajendra Sharma,@9166122226,@3,@Owner"); 
+     list.push("Villa-39,@Manish Salvi,@9024048874,@3,@Owner"); 
+     list.push("Villa-42,@Prakash Gaur,@9887444483,@2,@Owner"); 
+     list.push("Villa-43,@Arun Tripathi,@8003068888,@3,@Owner"); 
+     list.push("Villa-44,@Ravindra Verma,@9928309236,@3,@Owner"); 
+     list.push("Villa-45,@Nand Singh Rajawat,@9928438888,@3,@Owner"); 
+     list.push("Villa-46,@Vikas Mahala,@8561811965,@3,@Owner"); 
+     list.push("Villa-47,@Manoj ,@9460070338,@3,@Owner"); 
+     list.push("Villa-52,@Shailesh Bansal,@9461856524,@3,@Owner"); 
+     list.push("Villa-53,@Rohit Jain,@9828576337,@3,@Owner"); 
+     list.push("Villa-65,@Jalaj Rajpurohit,@9820684534,@3,@Owner");
+     list.push("Villa-67,@Abhishek Jaiman,@9414054353,@4,@Owner"); 
+     list.push("Villa-68,@Shrish Jaiman,@9887629361,@4,@Owner"); 
+     list.push("Villa-69,@Piyush,@9828487854,@5,@Owner"); 
+     list.push("Villa-71,@Suresh kumar Sharma,@8875115223,@3,@Owner"); 
+     list.push("Villa-72,@Nikesh Chaudhary,@9828030761,@3,@Owner"); 
+     list.push("Villa-73,@Richa Sharma,@9811547001,@2,@Owner"); 
+     list.push("Villa-88,@Pankaj Chauhan,@9772525987,@3,@Owner"); 
      
       
      generateTable(list)
@@ -171,7 +172,7 @@ function generateTable(list){
     var count =1;
     $(list).each(function(){
         var val = this.split(",@");
-        var tr="<tr><td>"+count+" </td><td>"+val[0]+"</td><td>"+val[1]+"</td><td>"+val[2]+"</td><td>"+val[3]+"</td></tr>";
+        var tr="<tr><td>"+count+" </td><td>"+val[0]+"</td><td>"+val[1]+"</td><td>"+val[2]+"</td><td>"+val[3]+"</td><td>"+val[4]+"</td></tr>";
         $("#displayTableDetails").append(tr);
         count++;
     });

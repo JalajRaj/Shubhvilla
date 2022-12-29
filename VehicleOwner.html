@@ -81,8 +81,8 @@
             <th>Sr. No</th>
             <th>Villa No.</th>
             <th>Villa Owner</th>
-            <th>Vehical No.</th>
-            
+            <th>4 wheeler Vehical</th>
+            <th>2 wheeler Vehical</th>
         </thead>
         <tbody></tbody>
         </table>
@@ -126,31 +126,31 @@
         
     function getOwnerDetails(){
      var list = [];
-     list.push("Villa-04,@Bhupesh Saini,@RJ06-CB-4279"); 9829325960
-     list.push("Villa-07,@Rahul Pandey,@RJ45-CJ-2141"); 9672125813
-     list.push("Villa-09,@Raghvendra Sharma,@RJ45-CJ-9296"); 7976767857
-     list.push("Villa-10,@Jogendra Sachdeva,@RJ45-CP-8446"); 9828080386
-     list.push("Villa-12,@Gaurav Kothari,@RJ14-CX-9887"); 9982567222
-     list.push("Villa-13,@Anil Sharma,@RJ14-CZ-2936"); 9983344889
-     list.push("Villa-24,@Abhimanyu Saraswat,@RJ01-CC-3068/ RJ01-CE-0919/ RJ14NC4125"); 9461594523
-     list.push("Villa-26,@Rakesh Kumar,@RJ45-CH-1989"); 9079205061
-     list.push("Villa-27,@Deepesh Sharma,@RJ14-CU-6335"); 9829192929
-     list.push("Villa-33,@Prakash Joshi,@RJ06-CB-4388"); 8128028832
-     list.push("Villa-34,@Vijay Meena,@RJ02-CC-5005"); 9667392585
-     list.push("Villa-37,@Gajendra Sharma,@RJ45-CA-3904"); 9166122226
-     list.push("Villa-39,@Manish Salvi,@RJ14-CW-9432"); 9024048874
-     list.push("Villa-42,@Prakash Gaur,@"); 9887444483
-     list.push("Villa-43,@Arun Tripathi,@RJ45-CS-3351"); 8003068888
-     list.push("Villa-44,@Ravindra Verma,@RJ01-CE-0223"); 9928309236
-     list.push("Villa-45,@Nand Singh Rajawat,@RJ14-CH-4622"); 9928438888
-     list.push("Villa-46,@Vikas Mahala,@RJ18-CB-9459"); 8561811965
-     list.push("Villa-47,@Manoj ,@RJ14-QC-4216"); 9460070338
-     list.push("Villa-52,@Shailesh Bansal,@RJ45-CL-1120"); 9461856524
-     list.push("Villa-53,@Rohit Jain,@RJ45-CO-1142"); 9828576337
-     list.push("Villa-65,@Jalaj Rajpurohit,@MH-46-BK-8091");
-     list.push("Villa-67,@Abhishek Jaiman,@RJ14-BH-9719"); 9414054353
-     list.push("Villa-68,@Shrish Jaiman,@RJ14-ZC-0181"); 9887629361
-     list.push("Villa-71,@Suresh kumar Sharma,@RJ45-CL-6128"); 8875115223
+     list.push("Villa-04,@Bhupesh Saini,@RJ06-CB-4279,@"); 9829325960
+     list.push("Villa-07,@Rahul Pandey,@RJ45-CJ-2141,@"); 9672125813
+     list.push("Villa-09,@Raghvendra Sharma,@RJ45-CJ-9296,@"); 7976767857
+     list.push("Villa-10,@Jogendra Sachdeva,@RJ45-CP-8446,@"); 9828080386
+     list.push("Villa-12,@Gaurav Kothari,@RJ14-CX-9887,@"); 9982567222
+     list.push("Villa-13,@Anil Sharma,@RJ14-CZ-2936,@"); 9983344889
+     list.push("Villa-24,@Abhimanyu Saraswat,@RJ01-CC-3068/ RJ01-CE-0919/ RJ14NC4125,@"); 9461594523
+     list.push("Villa-26,@Rakesh Kumar,@RJ45-CH-1989,@"); 9079205061
+     list.push("Villa-27,@Deepesh Sharma,@RJ14-CU-6335,@"); 9829192929
+     list.push("Villa-33,@Prakash Joshi,@RJ06-CB-4388,@"); 8128028832
+     list.push("Villa-34,@Vijay Meena,@RJ02-CC-5005,@"); 9667392585
+     list.push("Villa-37,@Gajendra Sharma,@RJ45-CA-3904,@"); 9166122226
+     list.push("Villa-39,@Manish Salvi,@RJ14-CW-9432,@"); 9024048874
+     list.push("Villa-42,@Prakash Gaur,@,@"); 9887444483
+     list.push("Villa-43,@Arun Tripathi,@RJ45-CS-3351,@"); 8003068888
+     list.push("Villa-44,@Ravindra Verma,@RJ01-CE-0223,@"); 9928309236
+     list.push("Villa-45,@Nand Singh Rajawat,@RJ14-CH-4622,@"); 9928438888
+     list.push("Villa-46,@Vikas Mahala,@RJ18-CB-9459,@"); 8561811965
+     list.push("Villa-47,@Manoj ,@RJ14-QC-4216,@"); 9460070338
+     list.push("Villa-52,@Shailesh Bansal,@RJ45-CL-1120,@"); 9461856524
+     list.push("Villa-53,@Rohit Jain,@RJ45-CO-1142,@"); 9828576337
+     list.push("Villa-65,@Jalaj Rajpurohit,@MH-46-BK-8091,@RJ14-KC-0941");
+     list.push("Villa-67,@Abhishek Jaiman,@,@RJ14-BH-9719"); 9414054353
+     list.push("Villa-68,@Shrish Jaiman,@RJ14-ZC-0181,@"); 9887629361
+     list.push("Villa-71,@Suresh kumar Sharma,@RJ45-CL-6128,@"); 8875115223
  
     
 
@@ -170,7 +170,7 @@ function generateTable(list){
     var count =1;
     $(list).each(function(){
         var val = this.split(",@");
-        var tr="<tr><td>"+count+" </td><td>"+val[0]+"</td><td>"+val[1]+"</td><td>"+val[2]+"</td></tr>";
+        var tr="<tr><td>"+count+" </td><td>"+val[0]+"</td><td>"+val[1]+"</td><td>"+val[2]+"</td><td>"+val[3]+"</td></tr>";
         $("#displayTableDetails").append(tr);
         count++;
     });
