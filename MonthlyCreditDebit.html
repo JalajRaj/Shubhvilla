@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shubh Villa</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="shortcut icon" href="img/logo1.jpg" type="image/x-icon">
+</head>
+
+<body onload="getJan2023()">
+    <div class="wrapper">
+        <header class="header">
+            <section class="header-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="contact">
+                                <p><span class="phone"><a href="#"></a></span><img src="img/logo1.png" alt="" width="60px" heigt="25px><span class="email"><a href="#">Email: shubhvilla.residents@gmail.com</a></span></p>
+                            </div>
+                        </div>
+                       
+                    </div>
+                </div>
+            </section>
+            <section class="header-bottom borderstyle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 col-sm-12 col-xs-12">
+                            <a href="#">
+                                <div class="main-logo">
+                                    <!--<img src="img/logo.png" alt="">-->
+                                    <h2>Shubh Villa</h2>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-7 col-sm-12 col-xs-12">
+                            <div class="menu">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="index.html">HOME </a></li>
+                                    <li><a href="MonthlyActivityFund.html">Society Activity Fund</a></li>
+									
+                                    <li class="activeHeader"><a href="MonthlyCreditDebit.html">Collection/Expenditure</a></li>
+                                    
+                                    <li><a href="ContactForm.html">Feedback\Suggestions</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header>
+        
+        <div class="container">
+            <form id="contact" action="" method="post">
+                <h3 style="color:darkgreen"> Monthly Collection Expenditure Details</h3>
+				<br>
+                <!--<h4 style="color:darkgreen">  Society Account Details </h4>
+                <h4 style="color:darkgreen">  Account: ######### , IFSC Code: $$$$$$$$ </h4>
+                <br>-->
+                <h4 style="color:darkgreen">  Final Balance = <span id="TotalCollection"></span> </h4>
+                
+                <fieldset>
+                    <label for="Name">Select Month</label>
+				   <select id="MonthSelection" onChange="return displayTableData()" class="form-control"></select>
+					
+                </fieldset>
+                <br>
+                <fieldset>
+                    <label for="Search">Search</label>
+				   <input id="Search" placeholder="Type to filter records" maxlength=10 class="form-control" type="text" cols="50"  style="margin-bottom: 10px" required autofocus>
+					
+                </fieldset>
+            </form>
+        </div>
+
+        <table id="displayTableDetails" class="table table-striped table-bordered table-hover">
+            <thead>
+                <th>Sr. No</th>
+                <th>Collection/Expenditure Details</th>
+                <th>From\At</th>
+                <th>Amount</th>
+                <th>Credit/Debit</th>
+            </thead>
+            <tbody></tbody>
+            </table>
+        
+        <div class="clear"></div>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 col-sm-8">
+                        <div class="footer-text one">
+                            <h3>CONTACT US</h3>
+                            <ul>
+                                <li><a href="#"><i class="material-icons">location_on</i>Shubh Villa, Narayan Vihar,Jaipur - 302020</a></li>
+                                <li><a href="#"><i class="material-icons">email</i>shubhvilla.residents@gmail.com</a></li>
+                                <!--<li><a href="#"><i class="material-icons">call </i>9820684534</a></li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer_bottom">
+                <p>Copyright@2022-23 <a href="#">Shubh Villa Phase I Owners</a> All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/animationCounter.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/active.js"></script>
+
+    <script>
+     
+
+	    var map = {}
+        map["Jan-2023"]="getJan2023";
+       // map["Feb-2023"]="getFeb2023";
+
+
+        function getJan2023(){
+         var list = [];
+         
+         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
+        list.push("Collection ,Villa 65,4500,C");
+        list.push("Collection ,Villa 45,1500,C");
+        list.push("Bill book print (in Process) ,Villa 65,-800,D");
+
+         generateTable(list)
+         SetBalanceColor();
+        
+        }
+  
+        
+        function getFeb2023(){
+         var list = [];
+         
+         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
+        list.push("Till previous month balance collection ,Villa 65,0,C");
+        list.push("Till previous month balance collection ,Villa 45,0,C");
+        list.push("Expenditure 1 ,Villa 65,-0,D");
+        list.push("Expenditure 2 ,Villa 45,-0,D");
+
+         generateTable(list)
+         SetBalanceColor();
+        
+        }
+
+    
+    function generateTable(list){
+        $("#displayTableDetails > tbody").empty()
+        var count =1;
+        $(list).each(function(){
+            var val = this.split(",");
+            var tr="<tr><td>"+count+" </td><td>"+val[0]+"</td><td>"+val[1]+"</td><td>"+val[2]+"</td><td>"+val[3]+"</td></tr>";
+            $("#displayTableDetails").append(tr);
+            count++;
+        });
+    }
+   
+
+    function displayTableData(){
+        eval($("#MonthSelection").val()+"()");
+    }
+
+    $(document).ready(function(){
+        $.map(map, function(value,key){
+            $('#MonthSelection').append('<option value="'+value+'">'+key+'</option>');
+        });
+        displayTableData();
+        SetBalanceColor();
+    });
+
+</script>
+
+    <script>
+            $(document).ready(function(){
+              $("#Search").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $("#displayTableDetails tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+            });
+
+            
+    </script>
+
+<script>
+    function SetBalanceColor(){
+    var cells = document.getElementById("displayTableDetails").getElementsByTagName("td");
+    var sumVal = 0;
+    var numberPattern = new RegExp('^\\d*$');
+    var NegativePattern = new RegExp('-');
+
+        for (var i = 0; i < cells.length; i++) {
+            if (cells[i].innerHTML !== "") {
+                if (cells[i].innerHTML.match(numberPattern)) {
+                cells[i].style.backgroundColor = "lightgreen";
+                sumVal = sumVal + parseInt(cells[i].innerHTML)
+                }
+            }
+            if (cells[i].innerHTML.match(NegativePattern)) {
+                cells[i].style.backgroundColor = "lightpink";
+                sumVal = sumVal + parseInt(cells[i].innerHTML)
+                }
+        }
+        document.getElementById("TotalCollection").innerHTML = sumVal;
+    }
+</script>
+
+</body>
+
+</html>
