@@ -69,6 +69,10 @@
                 <h4 style="color:darkgreen">  Account: ######### , IFSC Code: $$$$$$$$ </h4>
                 <br>-->
                 <h4 style="color:darkgreen">  Final Balance = <span id="TotalCollection"></span> </h4>
+
+                <h4 style="color:rgb(156, 10, 25)">  Monthly Expenditure = <span id="TotalD"></span> </h4>
+               <br>
+                <h4 style="color:darkgreen">  For any clarification regarding Poshbada function, please connect with Vill 65 or 86. </h4>
                 
                 <fieldset>
                     <label for="Name">Select Month</label>
@@ -139,6 +143,14 @@
         list.push("Collection ,Villa 65,43500,C");
         list.push("Collection ,Villa 45,10500,C");
         list.push("Bill receipt book,Villa 65,-600,D");
+        list.push("Vegetables,Villa 65,-434,D");
+        list.push("Disposal,Villa 65,-980,D");
+        list.push("Gas ki Tanki,Villa 65,-2000,D");
+        list.push("Mandir Bhog and Pandit Ji,Villa 65,-550,D");
+        list.push("Bhojan Samgri,Villa 65,-10376,D");
+        list.push("Shamiyana\Chairs,Villa 65,-4000,D");
+        list.push("Khana banane wale Pandit,Villa 65,-2500,D");
+        list.push("Pani Bottle,Villa 65,-800,D");
 
          generateTable(list)
          SetBalanceColor();
@@ -204,6 +216,7 @@
     function SetBalanceColor(){
     var cells = document.getElementById("displayTableDetails").getElementsByTagName("td");
     var sumVal = 0;
+    var sumD = 0;
     var numberPattern = new RegExp('^\\d*$');
     var NegativePattern = new RegExp('-');
 
@@ -217,6 +230,8 @@
             if (cells[i].innerHTML.match(NegativePattern)) {
                 cells[i].style.backgroundColor = "lightpink";
                 sumVal = sumVal + parseInt(cells[i].innerHTML)
+                sumD = sumD + parseInt(cells[i].innerHTML)
+                document.getElementById("TotalD").innerHTML = sumD;
                 }
         }
         document.getElementById("TotalCollection").innerHTML = sumVal;
