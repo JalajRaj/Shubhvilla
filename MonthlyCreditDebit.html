@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="img/logo1.jpg" type="image/x-icon">
 </head>
 
-<body onload="getJan2023()">
+<body onload="getFeb2023()">
     <div class="wrapper">
         <header class="header">
             <section class="header-top">
@@ -71,9 +71,9 @@
                 <h4 style="color:darkgreen">  Final Balance = <span id="TotalCollection"></span> </h4>
 
                 <h4 style="color:rgb(156, 10, 25)">  Monthly Expenditure = <span id="TotalD"></span> </h4>
-               <br>
+               <!--<br>
                 <h4 style="color:darkgreen">  For any clarification regarding Poshbada function details, please connect with Villa 65 or 86. </h4>
-                
+               -->
                 <fieldset>
                     <label for="Name">Select Month</label>
 				   <select id="MonthSelection" onChange="return displayTableData()" class="form-control"></select>
@@ -131,8 +131,8 @@
      
 
 	    var map = {}
+        map["Feb-2023"]="getFeb2023";
         map["Jan-2023"]="getJan2023";
-       // map["Feb-2023"]="getFeb2023";
 
         function getJan2023(){
          var list = [];
@@ -142,7 +142,6 @@
         list.push("Collection ,Villa 65,57000,C");
         //list.push("Collection ,Villa 45,13500,C");
         list.push("PaushBada Extra member collection,Villa 65,400,C");
-       // list.push("Bill receipt book,Villa 65,-600,D");
         list.push("Vegetables,Villa 65,-434,D");
         list.push("Disposal,Villa 65,-980,D");
         list.push("Gas ki Tanki,Villa 65,-2000,D");
@@ -153,6 +152,8 @@
         list.push("Pani Bottle,Villa 65,-800,D");
         list.push("26 Jan Sweets Bundi,Villa 65,-1200,D");
         list.push("26 Jan Flag and Flower,Villa 65,-200,D");
+        list.push("Bill receipt book,Villa 65,-600,D");
+        list.push("Record keeping book,Villa 65,-210,D");
 
          generateTable(list)
          SetBalanceColor();
@@ -164,10 +165,9 @@
          var list = [];
          
          // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Till previous month balance collection ,Villa 65,0,C");
-        list.push("Till previous month balance collection ,Villa 45,0,C");
-        list.push("Expenditure 1 ,Villa 65,-0,D");
-        list.push("Expenditure 2 ,Villa 45,-0,D");
+        list.push("Till previous month final balance ,Villa 65,37950,C");
+        //list.push("C 1 ,Villa 65,10,C");
+        //list.push("Expenditure 2 ,Villa 45,-20,D");
 
          generateTable(list)
          SetBalanceColor();
@@ -222,6 +222,7 @@
     var numberPattern = new RegExp('^\\d*$');
     var NegativePattern = new RegExp('-');
 
+    document.getElementById("TotalD").innerHTML = 0;
         for (var i = 0; i < cells.length; i++) {
             if (cells[i].innerHTML !== "") {
                 if (cells[i].innerHTML.match(numberPattern)) {
