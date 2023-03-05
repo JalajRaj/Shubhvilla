@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="img/logo1.jpg" type="image/x-icon">
 </head>
 
-<body onload="getFeb2023()">
+<body onload="getMar2023()">
     <div class="wrapper">
         <header class="header">
             <section class="header-top">
@@ -131,6 +131,7 @@
      
 
 	    var map = {}
+        map["Mar-2023"]="getMar2023";
         map["Feb-2023"]="getFeb2023";
         map["Jan-2023"]="getJan2023";
 
@@ -175,6 +176,24 @@
         
         }
 
+        function getMar2023(){
+         var list = [];
+         
+         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
+        list.push("Till previous month final balance ,Villa 65,39450,C");
+        list.push("Collection ,Villa 51,1500,C");
+        //list.push("C 1 ,Villa 65,10,C");
+        list.push("Holi Dinner Advance ,Villa 65,-5000,D");
+        list.push("Holi Color ,Villa 65,-2550,D");
+        list.push("Guru Ji Thandai ,Villa 65,-840,D");
+        list.push("Sugar ,Villa 65,-50,D");
+        list.push("Disposable glasses ,Villa 65,-130,D");
+
+         generateTable(list)
+         SetBalanceColor();
+        
+        }
+        
     
     function generateTable(list){
         $("#displayTableDetails > tbody").empty()
