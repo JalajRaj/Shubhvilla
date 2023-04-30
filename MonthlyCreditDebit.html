@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="img/logo1.jpg" type="image/x-icon">
 </head>
 
-<body onload="getMar2023()">
+<body onload="getApr2023()">
     <div class="wrapper">
         <header class="header">
             <section class="header-top">
@@ -131,6 +131,7 @@
      
 
 	    var map = {}
+        map["Apr-2023"]="getApr2023";
         map["Mar-2023"]="getMar2023";
         map["Feb-2023"]="getFeb2023";
         map["Jan-2023"]="getJan2023";
@@ -205,6 +206,20 @@
         }
         
     
+        function getApr2023(){
+         var list = [];
+         
+         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
+        list.push("Till previous month final balance ,Villa 65,5980,C");
+        list.push("Collection ,Villa 65,1500,C");
+        //list.push("C 1 ,Villa 65,10,C");
+        list.push("Samosa Cold drink on 30 April Metting,Villa 65,-1260,D");
+
+         generateTable(list)
+         SetBalanceColor();
+        
+        }
+
     function generateTable(list){
         $("#displayTableDetails > tbody").empty()
         var count =1;
