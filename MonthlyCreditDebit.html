@@ -18,7 +18,7 @@
     <link rel="shortcut icon" href="img/logo1.jpg" type="image/x-icon">
 </head>
 
-<body onload="getAug2023()">
+<body onload="getSep2023()">
     <div class="wrapper">
         <header class="header">
             <section class="header-top">
@@ -131,6 +131,7 @@
      
 
 	    var map = {}
+        map["Sep-2023"]="getSep2023";
         map["Aug-2023"]="getAug2023";
         map["Jul-2023"]="getJul2023";
         map["Jun-2023"]="getJun2023";
@@ -269,6 +270,16 @@
         list.push("Independence day flowers ,Villa 65,-80,D");
         list.push("Independence day meeting tea ,Villa 65,-120,D");
         list.push("27th August: chair ,Villa 65,-500,D");
+         generateTable(list)
+         SetBalanceColor();
+        
+        }
+
+        function getSep2023(){
+         var list = [];
+         
+         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
+        list.push("Till previous month final balance ,Villa 10,1548,C");
          generateTable(list)
          SetBalanceColor();
         
