@@ -51,7 +51,6 @@
                                     <li><a href="MonthlyActivityFund.html">Society Activity Fund</a></li>
 									
                                     <li class="activeHeader"><a href="MonthlyCreditDebit.html">Collection/Expenditure</a></li>
-                                    <li><a href="OtherActivity.html">Other Activity</a></li>
                                     <li><a href="ContactForm.html">Feedback\Suggestions</a></li>
                                 </ul>
                             </div>
@@ -63,14 +62,14 @@
         
         <div class="container">
             <form id="contact" action="" method="post">
-                <h3 style="color:darkgreen"> Monthly Collection Expenditure Details</h3>
+                <h3 style="color:darkgreen"> Quarterly Collection Expenditure Details</h3>
 				<br>
                 <!--<h4 style="color:darkgreen">  Society Account Details </h4>
                 <h4 style="color:darkgreen">  Account: ######### , IFSC Code: $$$$$$$$ </h4>
                 <br>-->
                 <h4 style="color:darkgreen">  Final Balance = <span id="TotalCollection"></span> </h4>
 
-                <h4 style="color:rgb(156, 10, 25)">  Monthly Expenditure = <span id="TotalD"></span> </h4>
+                <h4 style="color:rgb(156, 10, 25)">  Quarterly Expenditure = <span id="TotalD"></span> </h4>
                <!--<br>
                 <h4 style="color:darkgreen">  For any clarification regarding Poshbada function details, please connect with Villa 65 or 86. </h4>
                -->
@@ -131,36 +130,17 @@
      
 
 	    var map = {}
-        map["Oct-2023"]="getOct2023";
-        map["Sep-2023"]="getSep2023";
-        map["Aug-2023"]="getAug2023";
-        map["Jul-2023"]="getJul2023";
-        map["Jun-2023"]="getJun2023";
-        map["May-2023"]="getMay2023";
-        map["Apr-2023"]="getApr2023";
-        map["Mar-2023"]="getMar2023";
-        map["Feb-2023"]="getFeb2023";
-        map["Jan-2023"]="getJan2023";
+        map["JanToMar-2024"]="getJanToMar2024";
+   
 
-        function getJan2023(){
+        function getJanToMar2024(){
          var list = [];
          
          // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Previous function balance,Villa 65,4500,C");
-        list.push("Collection ,Villa 65,57000,C");
-        list.push("PaushBada Extra member collection from villa 24,Villa 65,400,C");
-        list.push("Vegetables,Villa 65,-434,D");
-        list.push("Disposal,Villa 65,-980,D");
-        list.push("Gas ki Tanki,Villa 65,-2000,D");
-        list.push("Mandir Bhog and Pandit Ji,Villa 65,-550,D");
-        list.push("Bhojan Samgri,Villa 65,-10476,D");
-        list.push("Shamiyana Chairs,Villa 65,-4000,D");
-        list.push("Khana banane wale Pandit,Villa 65,-2500,D");
-        list.push("Pani Bottle,Villa 65,-800,D");
-        list.push("26 Jan Sweets Bundi,Villa 65,-1200,D");
-        list.push("26 Jan Flag and Flower,Villa 65,-200,D");
-        list.push("Bill receipt book,Villa 65,-600,D");
-        list.push("Record keeping book,Villa 65,-210,D");
+        list.push("Previous balance,Villa 65,2046,C");
+        list.push("Quarterly Collection ,Villa 65,1000,C");
+       // list.push("Vegetables,Villa 65,-434,D");
+        
 
          generateTable(list)
          SetBalanceColor();
@@ -168,140 +148,7 @@
         }
   
       
-        function getFeb2023(){
-         var list = [];
-         
-         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Till previous month final balance ,Villa 65,37950,C");
-        list.push("Collection ,Villa 65,1500,C");
-        //list.push("C 1 ,Villa 65,10,C");
-        //list.push("Expenditure 2 ,Villa 45,-20,D");
-
-         generateTable(list)
-         SetBalanceColor();
-        
-        }
-
-        function getMar2023(){
-         var list = [];
-         
-         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Till previous month final balance ,Villa 65,39450,C");
-        //list.push("Collection Villa 51 ,Villa 65,1500,C");
-        list.push("Collection Villa 51 & 11 & 87 ,Villa 65,4500,C");
-        list.push("Holi dinner extra member collection from villa 10 & 52 & 53 & 86,Villa 65,4113,C");
-        //list.push("Holi Dinner Advance ,Villa 65,-5000,D");
-        list.push("Holi dinner  ,Villa 65,-30000,D");
-        list.push("Holi dinner Tent ,Villa 65,-3500,D");
-        list.push("Holi Color ,Villa 65,-2550,D");
-        list.push("Guru Ji Thandai ,Villa 65,-840,D");
-        list.push("Sugar ,Villa 65,-50,D");
-        list.push("Holika dahan puja samagri and flowers ,Villa 65,-286,D");
-        list.push("Disposable glasses ,Villa 65,-130,D");
-        list.push("Holika dahan lakdi,Villa 65,-920,D");
-        list.push("Holika dahan Puja Sweets,Villa 65,-900,D");
-        list.push("Pandit ji dakshina,Villa 65,-500,D");
-        list.push("Thandai Milk and Sugar,Villa 65,-1050,D");
-        list.push("Ram Navami Milk & Dahi,Villa 65,-415,D");
-        list.push("Ram Navami Panchamrit samagri,Villa 65,-942,D");
-        
-
-         generateTable(list)
-         SetBalanceColor();
-        
-        }
-        
-    
-        function getApr2023(){
-         var list = [];
-         
-         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Till previous month final balance ,Villa 65,5980,C");
-        list.push("Collection ,Villa 65,6000,C");
-        //list.push("C 1 ,Villa 65,10,C");
-        list.push("Samosa Cold Drink on 30 April Meeting,Villa 65,-1260,D");
-
-         generateTable(list)
-         SetBalanceColor();
-        
-        }
-
-        function getMay2023(){
-         var list = [];
-         
-         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Till previous month final balance ,Villa 65,10720,C");
-        list.push("Collection ,Villa 65,4500,C");
-        //list.push("C 1 ,Villa 65,10,C");
-        //list.push("Samosa Cold Drink on 30 April Meeting,Villa 65,-1260,D");
-
-         generateTable(list)
-         SetBalanceColor();
-        
-        }
-        function getJun2023(){
-         var list = [];
-         
-         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Till previous month final balance ,Villa 65,15220,C");
-        //list.push("Collection ,Villa 65,4500,C");
-         generateTable(list)
-         SetBalanceColor();
-        
-        }
-
-        function getJul2023(){
-         var list = [];
-         
-         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Till previous month final balance ,Villa 65,15220,C");
-        list.push("Return Socity Activity Fund,Villa 65,-10500,D");
-        //list.push("Collection ,Villa 65,4500,C");
-         generateTable(list)
-         SetBalanceColor();
-        
-        }
-
-        function getAug2023(){
-         var list = [];
-         
-         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Till previous month final balance ,Villa 65,4720,C");
-        list.push("Independence day laddu,Villa 65,-2472,D");
-        list.push("Independence day flowers ,Villa 65,-80,D");
-        list.push("Independence day meeting tea ,Villa 65,-120,D");
-        list.push("27th August: chair ,Villa 65,-500,D");
-         generateTable(list)
-         SetBalanceColor();
-        
-        }
-
-        function getSep2023(){
-         var list = [];
-         
-         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Till previous month final balance ,Villa 10,1548,C");
-         generateTable(list)
-         SetBalanceColor();
-        
-        }
-        
-
-
-        function getOct2023(){
-         var list = [];
-         
-         // Sr. No,	Collection/Expenditure Details,	From,	Amount,	Credit/Debit
-        list.push("Till previous month final balance ,Villa 10,1548,C");
-        list.push("Other Activity balance ,Villa 10,1163,C");
-        list.push("Collection ,Villa 10,35400,C");
-        list.push("Dussehra celebration Ravan dahan  ,Villa 10,-12910,D");
-
-         generateTable(list)
-         SetBalanceColor();
-        
-        }
-
+      
     function generateTable(list){
         $("#displayTableDetails > tbody").empty()
         var count =1;
