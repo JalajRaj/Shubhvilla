@@ -63,20 +63,31 @@
             <form id="contact" action="" method="post">
                 <h3 style="color:darkgreen"> Monthly Maintenance Fund  </h3>
                 <br>
-                <h4 style="color:darkgreen">  Monthly Maintenance Details (1000 per month till Jun and from July 2000 from each villa)</h4>
+                <h4 style="color:darkgreen">  Monthly Maintenance Details (From April 2000 from each villa)</h4>
+
+                 
+                <br>
+                <h4 style="color:darkgreen">  Final Balance = <span id="TotalCollection"></span> </h4>
+                <br>
+				
+
                 <!--<h4 style="color:darkgreen">  Account: ########### , IFSC Code: $$$$$$$$$$ </h4>-->
                 <!--<h4 style="color:darkgreen">  Cash / Online Amount to Pankaj Ji (Mobile No. 9929199901) Shubh Villa </h4>-->
+                <!--
                 <h4 style="color:darkgreen">  Cash only at Villa No. 10 </h4>
                 <h4 style="color:darkgreen">  48000 collected at Villa No. 73 </h4>
                 <br>
                 <h4 style="color:darkblue">  Jan-Feb-Mar 2023 Balance = 1,35,000  </h4>
                 <h4 style="color:darkblue">  Apr-May-Jun 2023 Balance = 1,26,000  </h4>
                 <h4 style="color:darkblue">  Jul-Aug-Sep 2023 Balance = 3,30,000  </h4>
-                <h4 style="color:darkblue">  Oct-Nov-Dec 2023 Balance = 2,70,000  </h4> <!--591000 -Total-->
+                <h4 style="color:darkblue">  Oct-Nov-Dec 2023 Balance = 2,70,000  </h4> 
+                -->
+                <!--591000 -Total-->
+            <!--
                 <a class="image-link" href="img/Recipt_JanToMar.jpg"><img src="img/ClickHere.jpg"></a>
 
                 <h4 style="color:rgb(63, 13, 229)">  Final Balance = <span id="TotalCollection"></span> </h4>
-
+                    -->
               
 				<fieldset>
                     <label for="Name">Select Year</label>
@@ -101,9 +112,9 @@
 		<th>Sr. No</th>
 		<th>Villa Number</th>
 		<th>Owner Name</th>
-		<th>Jan</th>
+		<!--<th>Jan</th>
 		<th>Feb</th>
-		<th>Mar</th>
+		<th>Mar</th>-->
 		<th>Apr</th>
 		<th>May</th>
 		<th>Jun</th>
@@ -134,7 +145,7 @@
                 </div>
             </div>
             <div class="footer_bottom">
-                <p>Copyright@2022-23 <a href="#">Shubh Villa Phase I Owners</a> All Rights Reserved</p>
+                <p>Copyright@2023-24 <a href="#">Shubh Villa Phase I Owners</a> All Rights Reserved</p>
             </div>
         </footer>
     </div>
@@ -147,9 +158,203 @@
    
     <script>
 	var map = {}
-      map["Year-2023"]="getYear2023";
+      map["Year-2024"]="getYear2024";
+    //  map["Year-2023"]="getYear2023";
      
-	
+
+      function getYear2024(){
+     var list = [];
+
+     list.push("P1-Villa-01,Pooja Sharma,,,,,,,,,,"); 
+        list.push("P1-Villa-04,Bhupesh Saini,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-05,Shishir Maltiyar,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-06,Hemant Kumar,,,,,,,,,"); 
+        list.push("P1-Villa-07,Rahul Pandey,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-08,Anil Sharma,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-09,Raghvendra Sharma,,,,,,,,,"); 
+        list.push("P1-Villa-10,Jogendra Sachdeva,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-11,Sundeep Mahala,,,,,,,,,"); 
+        list.push("P1-Villa-12,Gaurav Kothari,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-13,Anil Sharma,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-14,Ayush   Shandilya,,,,,,,,,"); 
+        list.push("P1-Villa-15,Sunil   Kumar,,,,,,,,,"); 
+        list.push("P1-Villa-16,Preeti Meena,,,,,,,,,"); 
+        list.push("P1-Villa-17,khushi Khandelwal,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-18,Pooja   Saxena,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-19,Hitesh Sain,,,,,,,,,"); 
+        list.push("P1-Villa-20,Ved Prakash Parashar,,,,,,,,,"); 
+        list.push("P1-Villa-21,Dariya Singh,,,,,,,,,"); 
+        list.push("P1-Villa-22,Shivani sanjeev sharma,,,,,,,,,"); 
+        list.push("P1-Villa-23,Akshay Saraswat,,,,,,,,,"); 
+        list.push("P1-Villa-24,Abhimanyu Saraswat,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-25,Pooja Khandelwal,,,,,,,,,"); 
+        list.push("P1-Villa-26,Rakesh Kumar,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-27,Deepesh Sharma,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-28,Mohit Juneja,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-29,Lokshita Mathur,,,,,,,,,"); 
+        list.push("P1-Villa-30,Peeyush Mathur,,,,,,,,,"); 
+        list.push("P1-Villa-31,Mahesh Taparia,,,,,,,,,"); 
+        list.push("P1-Villa-32,Peeyush Verma,,,,,,,,,"); 
+        list.push("P1-Villa-33,Prakash Joshi,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-34,Vijay Meena,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-35,D V Saraswat & Kusum Saraswat,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-36,Harish Kumar Yadav,,,,,,,,,"); 
+        list.push("P1-Villa-37,Gajendra Sharma,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-38,ManishaSingh,,,,,,,,,"); 
+        list.push("P1-Villa-39,Manish Salvi,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-40,Anita Kanwar,,,,,,,,,"); 
+        list.push("P1-Villa-41,Monika Mittal,,,,,,,,,"); 
+        list.push("P1-Villa-42,Prakash Gaur,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-43,Arun Tripathi,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-44,Ravindra Verma,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-45,Nand Singh Rajawat,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-46,Vikas Mahala,2000,,,,,,,,"); 
+        list.push("P1-Villa-47,Manoj Ji,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-48,R C Sharma ,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-49,Sunita Verma,,,,,,,,,"); 
+        list.push("P1-Villa-50,Abhishek Garg,,,,,,,,,"); 
+        list.push("P1-Villa-51,Jatin Kumar,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-52,Shailesh Bansal,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-53,Rohit Jain,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-54,Vinod Kumar Garg,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-55,Raj Kamal,,,,,,,,,"); 
+        list.push("P1-Villa-56_57A,Kajor Mal Goyal,,,,,,,,,"); 
+        list.push("P1-Villa-58_57B,Deepak Swaroop Garg,,,,,,,,,"); 
+        list.push("P1-Villa-59,Kamal Preet Singh Narula,,,,,,,,,"); 
+        list.push("P1-Villa-60,Santra Devi,,,,,,,,,"); 
+        list.push("P1-Villa-61,Divanshi Dhanjani,,,,,,,,,"); 
+
+
+        list.push("P1-Villa-62,Lal Singh,,,,,,,,,"); 
+        list.push("P1-Villa-63,Yogesh Ji,,,,,,,,,"); 
+        list.push("P1-Villa-64,Sahil Meghnani,2000,2000,2000,,,,,,");
+        list.push("P1-Villa-65,Jalaj Rajpurohit,2000,2000,2000,,,,,,");
+        list.push("P1-Villa-66,Manju Gehlot,,,,,,,,,");
+        list.push("P1-Villa-67,Abhishek Jaiman,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-68,Shrish Jaiman,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-69,Piyush Sharma,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-70,Vineet Sharma,,,,,,,,,"); 
+        list.push("P1-Villa-71,Suresh kumar Sharma,,,,,,,,,"); 
+        list.push("P1-Villa-72,Nikesh Chaudhary,,,,,,,,,"); 
+        list.push("P1-Villa-73,Richa Sharma,,,,,,,,,"); 
+        list.push("P1-Villa-74,Praveen Kumar Prajapat,,,,,,,,,"); 
+        list.push("P1-Villa-75,Archna Goswami,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-76,Surya Nagal,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-77,Devki Nandan Mathuriya,,,,,,,,,"); 
+        list.push("P1-Villa-78,Akshat Mangal,,,,,,,,,"); 
+        list.push("P1-Villa-79,Rahul Peswani,,,,,,,,,"); 
+        list.push("P1-Villa-80,Rahul Peswani,,,,,,,,,"); 
+        list.push("P1-Villa-81,Mamta Sharma,,,,,,,,,"); 
+        list.push("P1-Villa-82,Swati Bansal,,,,,,,,,"); 
+        list.push("P1-Villa-83,Tarun Sharda,,,,,,,,,"); 
+        list.push("P1-Villa-84,Tarun Sharda,,,,,,,,,"); 
+        list.push("P1-Villa-85,Pradeep Verma,,,,,,,,,"); 
+        list.push("P1-Villa-86,Surendra Agrawal,,,,,,,,,"); 
+        list.push("P1-Villa-87,Devendra Singh,,,,,,,,,"); 
+        list.push("P1-Villa-88,Pankaj Chauhan & Pushpa Tomar,,,,,,,,,"); 
+        list.push("P1-Villa-89,Khem Chand Nagal,,,,,,,,,"); 
+        list.push("P1-Villa-90,Vivek Dubey,,,,,,,,,"); 
+        list.push("P1-Villa-91,Rajendra Prasad Gupta,,,,,,,,,"); 
+        list.push("P1-Villa-92,Anil Kumar Gupta,,,,,,,,,"); 
+        list.push("P1-Villa-93,Manju Sexena,,,,,,,,,"); 
+        list.push("P1-Villa-94,Rounak Rajendra Bhatt,,,,,,,,,"); 
+        list.push("P1-Villa-95,Deepti Sharma,,,,,,,,,"); 
+        list.push("P1-Villa-96,George Pal Singh,,,,,,,,,"); 
+        list.push("P1-Villa-97,Surendra Kumawat,,,,,,,,,"); 
+        list.push("P1-Villa-98,Hitesh Jain,,,,,,,,,"); 
+        list.push("P1-Villa-99,Sakshi Singh,,,,,,,,,"); 
+        list.push("P1-Villa-100,Akansha Garg,,,,,,,,,"); 
+        list.push("P1-Villa-101,Laxmi Agarwal,,,,,,,,,"); 
+        list.push("P1-Villa-102,Pratima Singh,,,,,,,,,"); 
+        list.push("P1-Villa-103,Vandana Soni,,,,,,,,,"); 
+        list.push("P1-Villa-104,Rajender Singh,,,,,,,,,"); 
+        list.push("P1-Villa-105,Vandana Soni,,,,,,,,,"); 
+        list.push("P1-Villa-106,Vandana Soni,,,,,,,,,"); 
+        list.push("P1-Villa-107,Rita Soni,,,,,,,,,"); 
+        list.push("P1-Villa-108,Shanky Munjal,,,,,,,,,"); 
+        list.push("P1-Villa-109,Satish Kumar,,,,,,,,,"); 
+        list.push("P1-Villa-110,Deepika Sharma,,,,,,,,,"); 
+        list.push("P1-Villa-111,Rajat Kumar Sharma,,,,,,,,,"); 
+
+        list.push("P2-Villa-01,Mayank Goyal,,,,,,,,,"); 
+        list.push("P2-Villa-02,Raghav Choudhary,,,,,,,,,"); 
+        list.push("P2-Villa-03,Himmat Singh,,,,,,,,,"); 
+        list.push("P2-Villa-04,Meghraj Khandelwal,,,,,,,,,"); 
+        list.push("P2-Villa-05,Manju Sharma,,,,,,,,,"); 
+        list.push("P2-Villa-06,Monika Kheskani,,,,,,,,,"); 
+        list.push("P2-Villa-07,shishir Nama,,,,,,,,,"); 
+        list.push("P2-Villa-08,Saroj Sharma,,,,,,,,,"); 
+        list.push("P2-Villa-09,Raj kumar Sharma,,,,,,,,,"); 
+        list.push("P2-Villa-10,Deokanta sharma,,,,,,,,,"); 
+        list.push("P2-Villa-11,Payal,,,,,,,,,"); 
+        list.push("P2-Villa-12,Rashmi Jain,,,,,,,,,"); 
+        list.push("P2-Villa-13,Ankur Surana,,,,,,,,,"); 
+        list.push("P2-Villa-14,Jitendra Lalwani,,,,,,,,,"); 
+        list.push("P2-Villa-15,Dropati Lalwani,,,,,,,,,"); 
+        list.push("P2-Villa-16,Seema Asawat,,,,,,,,,"); 
+        list.push("P2-Villa-17,Sampati Devi Sharma,,,,,,,,,"); 
+        list.push("P2-Villa-18,Anshul Kumar Goyal,,,,,,,,,"); 
+        list.push("P2-Villa-19,Praveen Yadav,,,,,,,,,"); 
+        list.push("P2-Villa-20,Namita Kumawat,,,,,,,,,"); 
+        list.push("P2-Villa-21,Mohan Khandelwal,,,,,,,,,"); 
+        list.push("P2-Villa-22-A,Mohan Khandelwal,,,,,,,,,"); 
+        list.push("P2-Villa-22-B,Lokes hKumar Bapna,,,,,,,,,"); 
+        list.push("P2-Villa-23,Lokesh Kumar Bapna,,,,,,,,,"); 
+        list.push("P2-Villa-24,Dileep Dhandel,,,,,,,,,"); 
+        list.push("P2-Villa-25,Manisha Sharma,,,,,,,,,"); 
+        list.push("P2-Villa-26,Pragya Sharma,,,,,,,,,"); 
+        list.push("P2-Villa-27,Manju Rohia,,,,,,,,,"); 
+        list.push("P2-Villa-28,Nilam Kumari Yadav,,,,,,,,,"); 
+        list.push("P2-Villa-29,Sunita Lalwani,,,,,,,,,"); 
+        list.push("P2-Villa-30,Deep Chand,,,,,,,,,"); 
+        list.push("P2-Villa-31,Navdeep Kumar,,,,,,,,,"); 
+        list.push("P2-Villa-34,Monika shahani,,,,,,,,,"); 
+        list.push("P2-Villa-35,Monika Khandelwal,,,,,,,,,"); 
+        list.push("P2-Villa-37,Charul Rathore,,,,,,,,,"); 
+        list.push("P2-Villa-38,Sumit Panwar,,,,,,,,,"); 
+        list.push("P2-Villa-39,Nikita sharma,,,,,,,,,"); 
+        list.push("P2-Villa-40,Rajnish Machiwal,,,,,,,,,"); 
+        list.push("P2-Villa-41,Hemant Singh,,,,,,,,,"); 
+        list.push("P2-Villa-42,Tarun Mundotiya,,,,,,,,,"); 
+        list.push("P2-Villa-43,Suman Rathore,,,,,,,,,"); 
+        list.push("P2-Villa-44,Vivek Kumar,,,,,,,,,"); 
+        list.push("P2-Villa-45,Mukul Dixit,,,,,,,,,"); 
+        list.push("P2-Villa-46,Shailabh sharma,,,,,,,,,"); 
+        list.push("P2-Villa-47,Geeta Devi,,,,,,,,,"); 
+        list.push("P2-Villa-48,Shilpa Sharma,,,,,,,,,"); 
+        list.push("P2-Villa-49,Priti Gehlot,,,,,,,,,"); 
+        list.push("P2-Villa-50,Neha Nigam,,,,,,,,,"); 
+        list.push("P2-Villa-51,Saurabh Kumar,,,,,,,,,"); 
+        list.push("P2-Villa-52,Sangeeta Jain,,,,,,,,,"); 
+        list.push("P2-Villa-53,Kamla Gupta,,,,,,,,,"); 
+        list.push("P2-Villa-54,Jai Khandelwal,,,,,,,,,"); 
+        list.push("P2-Villa-55,Kriti Maheswari,,,,,,,,,"); 
+        list.push("P2-Villa-56,Pushpa kumari,,,,,,,,,"); 
+        list.push("P2-Villa-57,Anamika jain,,,,,,,,,"); 
+        list.push("P2-Villa-58,Anamika Tak,,,,,,,,,"); 
+        list.push("P2-Villa-59,Sandeep,,,,,,,,,"); 
+        list.push("P2-Villa-60,Mahendra kumar arya,,,,,,,,,"); 
+        list.push("P2-Villa-61,awadesh kumar Mishra,,,,,,,,,"); 
+        list.push("P2-Villa-62,DeepaJai Singh,,,,,,,,,"); 
+        list.push("P2-Villa-63,Ankita Rani,,,,,,,,,"); 
+        list.push("P2-Villa-64,Girdhari lal udai,,,,,,,,,"); 
+        list.push("P2-Villa-65,Jitendra Udai,,,,,,,,,"); 
+        list.push("P2-Villa-66,Dinesh kumar Kaushik,,,,,,,,,"); 
+        list.push("P2-Villa-67,Atul Kumar,,,,,,,,,"); 
+        list.push("P2-Villa-68,Dinesh Sain,,,,,,,,,"); 
+        list.push("P2-Villa-69,Deepak Shahani,,,,,,,,,"); 
+        list.push("P2-Villa-70,Yogyata singh,,,,,,,,,"); 
+        list.push("P2-Villa-71,Preety Roy,,,,,,,,,"); 
+        list.push("P2-Villa-72,Hari Om Meena,,,,,,,,,"); 
+        list.push("P2-Villa-73,Yogesh Kumar,,,,,,,,,"); 
+        list.push("P2-Villa-74,Kaushalya Saini,,,,,,,,,"); 
+        list.push("P2-Villa-75,Rajat Mathur,,,,,,,,,"); 
+        list.push("P2-Villa-76,Nilesh Dangavach,,,,,,,,,"); 
+
+
+     generateTable(list)
+    }
+
 
 	function getYear2023(){
 	 var list = [];
@@ -278,7 +483,8 @@ function generateTable(list){
 	var count =1;
 	$(list).each(function(){
 		var val = this.split(",");
-		var tr="<tr><td>"+count+" </td><td>"+val[0]+"</td><td>"+val[1]+"</td><td>"+val[2]+"</td><td>"+val[3]+"</td><td>"+val[4]+"</td><td>"+val[5]+"</td><td>"+val[6]+"</td><td>"+val[7]+"</td><td>"+val[8]+"</td><td>"+val[9]+"</td><td>"+val[10]+"</td><td>"+val[11]+"</td><td>"+val[12]+"</td><td>"+val[13]+"</td></tr>";
+	//	var tr="<tr><td>"+count+" </td><td>"+val[0]+"</td><td>"+val[1]+"</td><td>"+val[2]+"</td><td>"+val[3]+"</td><td>"+val[4]+"</td><td>"+val[5]+"</td><td>"+val[6]+"</td><td>"+val[7]+"</td><td>"+val[8]+"</td><td>"+val[9]+"</td><td>"+val[10]+"</td><td>"+val[11]+"</td><td>"+val[12]+"</td><td>"+val[13]+"</td></tr>";
+    var tr="<tr><td>"+count+" </td><td>"+val[0]+"</td><td>"+val[1]+"</td><td>"+val[2]+"</td><td>"+val[3]+"</td><td>"+val[4]+"</td><td>"+val[5]+"</td><td>"+val[6]+"</td><td>"+val[7]+"</td><td>"+val[8]+"</td><td>"+val[9]+"</td><td>"+val[10]+"</td><td></tr>";
 		$("#displayTableDetails").append(tr);
 		count++;
 	});
@@ -322,6 +528,9 @@ $(document).ready(function(){
                 }
             }
         }
+        document.getElementById("TotalCollection").innerHTML = sumVal;
+
+        sumVal = sumVal 
         document.getElementById("TotalCollection").innerHTML = sumVal;
     }
 </script>
