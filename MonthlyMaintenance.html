@@ -182,7 +182,7 @@
         list.push("P1-Villa-17,khushi Khandelwal,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-18,Pooja   Saxena,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-19,Hitesh Sain,,,,,,,,,"); 
-        list.push("P1-Villa-20,Ved Prakash Parashar,,,,,,,,,"); 
+        list.push("P1-Villa-20,Ved Prakash Parashar,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-21,Dariya Singh,,,,,,,,,"); 
         list.push("P1-Villa-22,Shivani sanjeev sharma,,,,,,,,,"); 
         list.push("P1-Villa-23,Akshay Saraswat,,,,,,,,,"); 
@@ -194,11 +194,11 @@
         list.push("P1-Villa-29,Lokshita Mathur,,,,,,,,,"); 
         list.push("P1-Villa-30,Peeyush Mathur,,,,,,,,,"); 
         list.push("P1-Villa-31,Mahesh Taparia,,,,,,,,,"); 
-        list.push("P1-Villa-32,Peeyush Verma,,,,,,,,,"); 
+        list.push("P1-Villa-32,Peeyush Verma,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-33,Prakash Joshi,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-34,Vijay Meena,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-35,D V Saraswat & Kusum Saraswat,2000,2000,2000,,,,,,"); 
-        list.push("P1-Villa-36,Harish Kumar Yadav,,,,,,,,,"); 
+        list.push("P1-Villa-36,Harish Kumar Yadav,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-37,Gajendra Sharma,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-38,ManishaSingh,,,,,,,,,"); 
         list.push("P1-Villa-39,Manish Salvi,2000,2000,2000,,,,,,"); 
@@ -207,8 +207,8 @@
         list.push("P1-Villa-42,Prakash Gaur,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-43,Arun Tripathi,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-44,Ravindra Verma,2000,2000,2000,,,,,,"); 
-        list.push("P1-Villa-45,Nand Singh Rajawat,2000,2000,2000,,,,,,"); 
-        list.push("P1-Villa-46,Vikas Mahala,2000,,,,,,,,"); 
+        list.push("P1-Villa-45,Nand Singh Rajawat,2000,0,0,,,,,,"); 
+        list.push("P1-Villa-46,Vikas Mahala,2000,0,0,,,,,,"); 
         list.push("P1-Villa-47,Manoj Ji,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-48,R C Sharma ,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-49,Sunita Verma,,,,,,,,,"); 
@@ -218,8 +218,8 @@
         list.push("P1-Villa-53,Rohit Jain,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-54,Vinod Kumar Garg,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-55,Raj Kamal,,,,,,,,,"); 
-        list.push("P1-Villa-56_57A,Kajor Mal Goyal,,,,,,,,,"); 
-        list.push("P1-Villa-58_57B,Deepak Swaroop Garg,,,,,,,,,"); 
+        list.push("P1-Villa-56_57A,Kajor Mal Goyal,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-58_57B,Deepak Swaroop Garg,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-59,Kamal Preet Singh Narula,,,,,,,,,"); 
         list.push("P1-Villa-60,Santra Devi,,,,,,,,,"); 
         list.push("P1-Villa-61,Divanshi Dhanjani,,,,,,,,,"); 
@@ -526,6 +526,11 @@ $(document).ready(function(){
                 cells[i].style.backgroundColor = "lightgreen";
                 sumVal = sumVal + parseInt(cells[i].innerHTML)
                 }
+                if (cells[i].innerHTML == '0') {
+                cells[i].style.backgroundColor = "pink";
+                
+                }
+
             }
         }
         document.getElementById("TotalCollection").innerHTML = sumVal;
