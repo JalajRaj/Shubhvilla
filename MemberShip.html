@@ -64,7 +64,10 @@
                 <h3 style="color:darkgreen"> Socity Owners MemberShip Status  </h3>
                 <br>
                 <h4 style="color:darkgreen">  Society Account Details </h4>
-                <h4 style="color:darkgreen">  Account: 7774871568 , IFSC Code: idib000n163 </h4>
+                <h4 style="color:darkgreen">  Account: 7774871568  </h4>
+                <h4 style="color:darkgreen">  IFSC Code: idib000n163 </h4>
+                <br>
+                <h4 style="color:darkgreen">  200 Rs (100/- MemberShip Fee + 100/- Registration Fee) </h4>
                 
 				<fieldset>
                     <label for="Name">Select Year</label>
@@ -199,13 +202,13 @@ list.push("P1-Villa-01,Pooja Sharma,Pending");
         list.push("P1-Villa-66,Manju Gehlot,Pending");
         list.push("P1-Villa-67,Abhishek Jaiman,Pending"); 
         list.push("P1-Villa-68,Shrish Jaiman,Pending"); 
-        list.push("P1-Villa-69,Piyush Sharma,Pending"); 
+        list.push("P1-Villa-69,Piyush Sharma,Fees_Only"); 
         list.push("P1-Villa-70,Vineet Sharma,Pending"); 
         list.push("P1-Villa-71,Suresh kumar Sharma,Pending"); 
         list.push("P1-Villa-72,Nikesh Chaudhary,Pending"); 
-        list.push("P1-Villa-73,Richa Sharma,Pending"); 
+        list.push("P1-Villa-73,Richa Sharma,Fees_Only"); 
         list.push("P1-Villa-74,Praveen Kumar Prajapat,Pending"); 
-        list.push("P1-Villa-75,Archna Goswami,Done"); 
+        list.push("P1-Villa-75,Archna Goswami,Fees_Only"); 
         list.push("P1-Villa-76,Surya Nagal,Pending"); 
         list.push("P1-Villa-77,Devki Nandan Mathuriya,Pending"); 
         list.push("P1-Villa-78,Akshat Mangal,Pending"); 
@@ -299,7 +302,14 @@ $(document).ready(function(){
                 cells[i].style.backgroundColor = "pink";
                 
                 }
-
+                if (cells[i].innerHTML == 'Form_Only') {
+                cells[i].style.backgroundColor = "aqua";
+                
+                }
+                if (cells[i].innerHTML == 'Fees_Only') {
+                cells[i].style.backgroundColor = "aqua";
+                
+                }
             }
         }
         document.getElementById("TotalCollection").innerHTML = sumVal;
