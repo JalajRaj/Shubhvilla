@@ -15,10 +15,10 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
-    <link rel="shortcut icon" href="img/logo1.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
 </head>
 
-<body onload="displayTableData()>
+<body onload="displayTableData()">
     <div class="wrapper">
         <header class="header">
             <section class="header-top">
@@ -58,6 +58,7 @@
             </section>
         </header>
         
+       
 	
        <div class="container">
             <form id="contact" action="" method="post">
@@ -69,6 +70,8 @@
                 <br>
                 <h4 style="color:darkgreen">  200 Rs (100/- MemberShip Fee + 100/- Registration Fee) </h4>
                 
+                <img  src="img/SV_Activit_Ac.jpg" width="108px" heigt="165px" alt="" style="margin-bottom: 22px;"> 
+
 				<fieldset>
                     <label for="Name">Select Year</label>
 				   <select id="YearSelection" onChange="return displayTableData()" class="form-control"></select>
@@ -83,6 +86,7 @@
                
             </form>
         </div>
+
       
 <!-- <select id="YearSelection" onChange="return displayTableData()"></select> -->
 <!-- <table id="displayTableDetails" class="table table-striped table-bordered table-hover"
@@ -186,7 +190,7 @@ list.push("P1-Villa-01,Pooja Sharma,Pending");
         list.push("P1-Villa-49,Sunita Verma,Pending"); 
         list.push("P1-Villa-50,Abhishek Garg,Pending"); 
         list.push("P1-Villa-51,Jatin Kumar,Pending"); 
-        list.push("P1-Villa-52,Shailesh Bansal,Pending"); 
+        list.push("P1-Villa-52,Shailesh Bansal,Fees_Only"); 
         list.push("P1-Villa-53,Rohit Jain,Fees_Only"); 
         list.push("P1-Villa-54,Vinod Kumar Garg,Pending"); 
         list.push("P1-Villa-55,Raj Kamal,Pending"); 
@@ -221,7 +225,7 @@ list.push("P1-Villa-01,Pooja Sharma,Pending");
         list.push("P1-Villa-85,Pradeep Verma,Pending"); 
         list.push("P1-Villa-86,Surendra Agrawal,Fees_Only"); 
         list.push("P1-Villa-87,Devendra Singh,Pending"); 
-        list.push("P1-Villa-88,Pankaj Chauhan & Pushpa Tomar,Pending"); 
+        list.push("P1-Villa-88,Pankaj Chauhan & Pushpa Tomar,Fees_Only"); 
         list.push("P1-Villa-89,Khem Chand Nagal,Pending"); 
         list.push("P1-Villa-90,Vivek Dubey,Pending"); 
         list.push("P1-Villa-91,Rajendra Prasad Gupta,Pending"); 
@@ -290,13 +294,13 @@ $(document).ready(function(){
     function SetBalanceColor(){
     var cells = document.getElementById("displayTableDetails").getElementsByTagName("td");
     var numberPattern = new RegExp('^\\d*$');
-    var sumVal = 0;
+    
 
         for (var i = 0; i < cells.length; i++) {
             if (cells[i].innerHTML !== "") {
                 if (cells[i].innerHTML== 'Done') {
                 cells[i].style.backgroundColor = "lightgreen";
-                sumVal = sumVal + parseInt(cells[i].innerHTML)
+                
                 }
                 if (cells[i].innerHTML == 'Pending') {
                 cells[i].style.backgroundColor = "pink";
@@ -312,10 +316,7 @@ $(document).ready(function(){
                 }
             }
         }
-        document.getElementById("TotalCollection").innerHTML = sumVal;
-
-        sumVal = sumVal 
-        document.getElementById("TotalCollection").innerHTML = sumVal;
+        
     }
 </script>
 
