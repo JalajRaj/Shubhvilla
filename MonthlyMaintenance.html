@@ -178,7 +178,7 @@
         list.push("P1-Villa-10,Jogendra Sachdeva,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-11,Sundeep Mahala,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-12,Gaurav Kothari,2000,3000,3000,,,,,,"); 
-        list.push("P1-Villa-13,Anil Sharma,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-13,Anil Sharma,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-14,Ayush   Shandilya,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-15,Sunil   Kumar,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-16,Preeti Meena,2000,2000,2000,,,,,,"); 
@@ -201,7 +201,7 @@
         list.push("P1-Villa-33,Prakash Joshi,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-34,Vijay Meena,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-35,D V Saraswat & Kusum Saraswat,2000,3000,3000,,,,,,"); 
-        list.push("P1-Villa-36,Harish Kumar Yadav,2000,2000,2000,,,,,,"); 
+        list.push("P1-Villa-36,Harish Kumar Yadav,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-37,Gajendra Sharma,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-38,ManishaSingh,2000,0,0,,,,,,"); 
         list.push("P1-Villa-39,Manish Salvi,2000,3000,3000,,,,,,"); 
@@ -526,7 +526,13 @@ $(document).ready(function(){
         for (var i = 0; i < cells.length; i++) {
             if (cells[i].innerHTML !== "") {
                 if (cells[i].innerHTML.match(numberPattern)) {
-                cells[i].style.backgroundColor = "lightgreen";
+
+                    if (cells[i].innerHTML == '2000') {
+                        cells[i].style.backgroundColor = "lightgreen";
+                    }
+                     if (cells[i].innerHTML == '3000') {
+                         cells[i].style.backgroundColor = "aqua";
+                     }
                 sumVal = sumVal + parseInt(cells[i].innerHTML)
                 }
                 if (cells[i].innerHTML == '0') {
