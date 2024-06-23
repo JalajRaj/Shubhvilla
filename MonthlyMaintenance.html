@@ -169,7 +169,7 @@
       function getYear2024(){
      var list = [];
 
-     list.push("P1-Villa-01,Pooja Sharma,-4000,2000,2000,0,,,,,,,"); 
+     list.push("P1-Villa-01,Pooja Sharma,-4000,2000,2000,,,,,,,,"); 
         list.push("P1-Villa-04,Bhupesh Saini,-2000,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-05,Shishir Maltiyar,0,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-06,Hemant Kumar,-2000,2000,2000,2000,,,,,,"); 
@@ -204,7 +204,7 @@
         list.push("P1-Villa-35,D V Saraswat,0,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-36,Harish Kumar Yadav,0,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-37,Gajendra Sharma,0,2000,3000,3000,,,,,,"); 
-        list.push("P1-Villa-38,ManishaSingh,-6000,2000,0,0,,,,,,"); 
+        list.push("P1-Villa-38,ManishaSingh,-6000,2000,,,,,,,,"); 
         list.push("P1-Villa-39,Manish Salvi,0,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-40,Anita Kanwar,-2000,0,2000,2000,,,,,,"); 
         list.push("P1-Villa-41,Monika Mittal,-2000,2000,2000,2000,,,,,,"); 
@@ -246,8 +246,8 @@
         list.push("P1-Villa-76,Surya Nagal,0,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-77,Devki Nandan Mathuriya,0,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-78,Akshat Mangal,-8000,,,,,,,,,"); 
-        list.push("P1-Villa-79,Rahul Peswani,-6000,2000,0,0,,,,,,"); 
-        list.push("P1-Villa-80,Rahul Peswani,-8000,0,0,0,,,,,,"); 
+        list.push("P1-Villa-79,Rahul Peswani,-6000,2000,,,,,,,,"); 
+        list.push("P1-Villa-80,Rahul Peswani,-8000,,,,,,,,,"); 
         list.push("P1-Villa-81,Mamta Sharma,-2000,2000,2000,2000,,,,,,"); 
         list.push("P1-Villa-82,Swati Bansal,0,2000,3000,3000,,,,,,"); 
         list.push("P1-Villa-83,Tarun Sharda,-8000,,,,,,,,,"); 
@@ -532,7 +532,7 @@ $(document).ready(function(){
                     if (cells[i].innerHTML == '2000') {
                         cells[i].style.backgroundColor = "lightgreen";
                     }
-                     if (cells[i].innerHTML == '3000') {
+                     if (cells[i].innerHTML == '3000' || cells[i].innerHTML == '0') {
                          cells[i].style.backgroundColor = "aqua";
                      }
                 sumVal = sumVal + parseInt(cells[i].innerHTML)
