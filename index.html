@@ -509,12 +509,19 @@
 	//			}
 	//		});
 	//	});
+
+	if (location.protocol == 'https:'){
+        location.href = location.href.replace("https","http");
+      }
+	  
 	</script>
 	<script> 
         $(document).ready(function () 
             {
             $('.NO-CACHE').attr('src', function () { return $(this).attr('data-src') + "?a=" + Math.random() });
             });
+
+
     </script>
 </body>
 
