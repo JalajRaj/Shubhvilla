@@ -105,7 +105,7 @@ function myFunction() {
                 } else {
                 x.style.display = "none";
                 }
-                getOwnerDetails()
+          //      getOwnerDetails()
 
         } else if(($("#password").val() == 'Jalaj77' ) ) {
             
