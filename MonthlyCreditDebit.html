@@ -65,10 +65,12 @@
             <form id="contact" action="" method="post">
                 <h3 style="color:darkgreen"> Monthly Collection Expenditure Details</h3>
 				<br>
-                <h4 style="color:darkgreen">  Society Account Details </h4>
-                <h4 style="color:darkgreen">  Account: 7777694878 , IFSC Code: idib000n163 </h4>
+              <!--  <h4 style="color:darkgreen">  Society Account Details </h4>-->
+              <!--  <h4 style="color:darkgreen">  Account: 7777694878 , IFSC Code: idib000n163 </h4>-->
               <!--  <h4 style="color:darkgreen"> Quarterly Amount Collection 1000 </h4>-->
               <!--  <h4 style="color:darkgreen">  Final Balance = <span id="TotalCollection"></span> </h4> -->
+                <h4 style="color:darkgreen">  Society Account Balance As on 23-Oct-2026, 456600 </h4>
+                <br>
                 <h4 style="color:darkgreen">  Additional Collection = <span id="TotalAddCollection"></span> </h4>
 
                 <h4 style="color:rgb(156, 10, 25)">  Monthly Expenditure = <span id="TotalD"></span> </h4>
@@ -160,6 +162,11 @@
         list.push("Ganesh Chaturthi [14 Sep],Cultural,-2415,D");
         list.push("B.R.K. Mineral water [24 Sep],Service,-23100,D");
  
+        list.push("Road work Expedit expenses [13 Sep],Service,-2000,D");
+        list.push("Gate 2 pipe installation work saman [23 Sep],Service,-1380,D");
+        list.push("Gate 2 and pipe installation Electrician charges [24 Sep],Service,-1500,D");
+        list.push("Socity Gates Phone [30 Sep],Service,-662,D");
+		
          generateTable(list)
          SetBalanceColor();
         
@@ -190,7 +197,9 @@
         list.push("Decoration item shop [20 Oct],Cultural,1500,C");
         list.push("Camera AMC Q1 [17 Oct],Service,-3000,D");
         list.push("Camera switch and installation [23 Oct],Service,-3750,D");
- 
+        list.push("Garden electric box matrial [18 Oct],Service,-740,D");
+        list.push("Garden electric box elctrician charges [18 Oct],Service,-500,D");
+
          generateTable(list)
          SetBalanceColor();
         
@@ -311,8 +320,8 @@
                 if (cells[i].innerHTML.match(numberPattern)) {
                 cells[i].style.backgroundColor = "lightgreen";
                 sumVal = sumVal + parseInt(cells[i].innerHTML)
-                sumAddCol = sumVal
-                document.getElementById("TotalAddCollection").innerHTML = sumVal;
+                sumAddCol = sumAddCol + parseInt(cells[i].innerHTML)
+                document.getElementById("TotalAddCollection").innerHTML = sumAddCol;
                 }
             }
             if (cells[i].innerHTML.match(NegativePattern)) {
