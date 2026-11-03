@@ -88,6 +88,31 @@
                 </fieldset>
 
             </form>
+
+
+
+            
+    <h2>Contact Us</h2>
+    
+    <!-- Step 3: Ensure input 'name' attributes exactly match your EmailJS dynamic template variables -->
+    <form id="contact-form">
+        <div class="form-group">
+            <label for="user_name">Name</label>
+            <input type="text" id="user_name" name="from_name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="user_email">Email</label>
+            <input type="email" id="user_email" name="reply_to" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit">Send Email</button>
+    </form>
         </div>
 
 
@@ -120,6 +145,36 @@
     <script src="js/active.js"></script>
     <script src="js/contextPath.js"></script>
     <script src="js/bootpopup.js"></script> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@5/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Step 2: Initialize EmailJS with your Public Key
+            // Get your Public Key from the Account tab in the EmailJS Dashboard
+            emailjs.init({
+                publicKey: "4VfDTof13mJ3PyshB",
+            });
+        })();
+    </script>
+
+<script type="text/javascript">
+        // Step 4: Add an event listener to intercept form submission and pass it to EmailJS
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent standard page refresh
+
+                // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with IDs from your dashboard
+                emailjs.sendForm('service_wozhkw4', 'template_126p5ti', this)
+                    .then(function() {
+                        alert('SUCCESS! Your email has been sent.');
+                        document.getElementById('contact-form').reset(); // Clear the form fields
+                    }, function(error) {
+                        alert('FAILED... Please look at the console log for detailed errors.');
+                        console.error('EmailJS Error:', error);
+                    });
+            });
+        }
+    </script>
+
     <script>
         function sendInfo(obj){
           
