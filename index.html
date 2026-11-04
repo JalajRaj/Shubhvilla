@@ -23,6 +23,40 @@
 </head>
 
 <body>
+
+	
+</style>
+</head>
+
+<body>
+
+<!-- Access Popup -->
+<div id="accessPopup">
+    <div class="popup-box">
+        <h2>ShubhVilla</h2>
+        <p>Please enter your unique access code</p>
+
+        <input type="password"
+               id="accessCode"
+               placeholder="Enter Access Code">
+
+        <br>
+
+        <button onclick="verifyCode()">Submit</button>
+
+        <p id="errorMsg"></p>
+    </div>
+</div>
+
+<!-- Website Content -->
+<div id="websiteContent" style="display:none;">
+
+   
+    <!-- Your existing index page content here -->
+
+</div>
+
+
 	<div class="wrapper">
 		<header class="header">
 			<section class="header-top ">
@@ -266,6 +300,41 @@
 
 
     </script>
+
+	<script>
+
+// Fixed access code
+const FIXED_CODE = "SVP1@2026";
+
+function verifyCode() {
+
+    const enteredCode =
+        document.getElementById("accessCode").value;
+
+    if (enteredCode === FIXED_CODE) {
+
+        document.getElementById("accessPopup").style.display = "none";
+
+        document.getElementById("websiteContent").style.display = "block";
+
+    } else {
+
+        document.getElementById("errorMsg").innerText =
+            "Invalid access code. Please try again.";
+
+    }
+}
+
+// Enter key support
+document.getElementById("accessCode")
+.addEventListener("keypress", function(event) {
+    if (event.key === "Enter") {
+        verifyCode();
+    }
+});
+
+</script>
+
 </body>
 
 </html>
